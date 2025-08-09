@@ -16,7 +16,6 @@ if n > m:
     exit()
 
 answer = random.randint(n, m)
-# = random.randrange(a, b+1)
 max_attempts = 5
 
 for attemp in range(1,max_attempts + 1):
