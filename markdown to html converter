@@ -1,0 +1,23 @@
+import sys
+import markdown
+
+def main():
+    command = sys.argv[1]
+    input_path = sys.argv[2]
+    output_path = sys.argv[3]
+
+    try:
+        with open(input_path,"r", encoding = "utf-8") as f:
+            md_text = f.read()
+        
+        html = markdown.markdown(md_text)
+
+        with open(output_path,"w",encoding="utf-8") as f:
+            f.write(html)
+    
+    except Exception:
+        print("error")
+
+if __name__ == "__main__":
+    main()
+    
